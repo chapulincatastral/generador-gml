@@ -6,4 +6,6 @@ Descripción: Este complemento permite exportar desde AutoCAD ficheros en format
 Uso: Es necesario cargar en AutoCad  el archivo .lsp previamente descargado.Lo podemos cargar  mediante el comando appload o el menú herramientas -> cargar aplicación. 
 Una vez cargado tenemos cuatro comandos nuevos: gml28, gml29, gml30, gml31. Que invocaremos desde la linea de COMANDO dependiendo del uso en que nos encontremos. 
 
+Demo: https://youtu.be/js4I93n6rmY
+
 Etiquetas: gml, parcela catastral, sec, inspire, autolisp, autocad, catastro, cadastre, notarías, notarios, registros, registradores, dxf, exportar, coordinación, cartografía.
