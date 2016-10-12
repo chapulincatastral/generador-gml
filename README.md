@@ -8,6 +8,6 @@ Una vez cargado tenemos cuatro comandos nuevos: gml28, gml29, gml30, gml31. Que 
 
 Demo: https://youtu.be/js4I93n6rmY
 
-Web : [http://generador-gml.blogspot.com.es
+Web : http://generador-gml.blogspot.com.es
 
 Etiquetas: gml, parcela catastral, sec, inspire, autolisp, autocad, catastro, cadastre, notarías, notarios, registros, registradores, dxf, exportar, coordinación, cartografía.
