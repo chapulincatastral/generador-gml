@@ -87,22 +87,21 @@
 <!-- Si se desea entregar varias parcelas en un mismo fichero, se pondra un nuevo featureMember para cada parcela -->
 </gml:FeatureCollection>
 ")
-(defun vl-string-subst (ntext stext extx)
+(defun vl-string-subst (nuevo_texto susti_texto texto)
 (setq plc 1 
-      slen (strlen stext))
-(while (>= (strlen extx) (+ (- plc 1) slen) )
-    (setq fp    (substr extx 1 (- plc 1))
-          chkpt (substr extx plc slen)
-          lp    (substr extx (+ plc slen)  ) 
+      slen (strlen susti_texto))
+(while (>= (strlen texto) (+ (- plc 1) slen) )
+    (setq fp    (substr texto 1 (- plc 1))
+          chkpt (substr texto plc slen)
+          lp    (substr texto (+ plc slen)  ) 
     );setq
-    (if (= chkpt stext)(progn
-        (setq extx (strcat fp ntext lp)
-              ;enlist (subst(cons 1 extx)(assoc 1 enl)enl)
-              plc  (- (+ plc (strlen ntext)) 1)))
+    (if (= chkpt susti_texto)(progn
+        (setq texto (strcat fp nuevo_texto lp)
+              plc  (- (+ plc (strlen nuevo_texto)) 1)))
     ); if 
     (setq plc (+ plc 1))
 );while
-(setq extx extx)
+(setq texto texto)
 );defun
 
 (defun coordenada_toasc (una_coordenada)
