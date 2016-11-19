@@ -1,6 +1,6 @@
 ; Script LISP generar-gml v1.0
 ; Autores: Castell Cebolla, Álvaro Álvarez, Pepe Alacreu
-; (c) Catrasto 2016
+; (c) Catastro 2016
 
 ; LIMITACIÓN DE RESPONSABILIDAD: El Catastro no proporciona soporte de este script. El script se proporciona tal cual es sin garantía de ningún tipo. El Catastro además se exime de toda garantía implícita incluyendo, sin limitación, cualquier garantía de comerciabilidad o de idoneidad para un propósito en particular. Usted asume todo el riesgo surgido por el uso o el funcionamiento del script y su documentación. En ningún caso será el Catastro, sus autores, o cualquier otra persona involucrada en la creación, producción o distribución del script responsable por los daños y perjuicios (incluyendo, sin limitación, daños por pérdida de beneficios empresariales, interrupción de negocio, pérdida de información comercial u otra pérdida pecuniaria) derivados del uso o la incapacidad de usar el script y su documentación, incluso si el Catastro ha sido advertido de la posibilidad de tales daños.
 
