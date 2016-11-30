@@ -6,7 +6,9 @@ Descripción: Este complemento permite exportar desde AutoCAD ficheros en format
 Uso: Es necesario cargar en AutoCAD el archivo .lsp previamente descargado. Lo podemos cargar mediante el comando appload o el menú Herramientas -> Cargar aplicación. 
 Una vez cargado tenemos cuatro comandos nuevos: gml28, gml29, gml30, gml31. Que invocaremos desde la línea de COMANDO dependiendo del huso en que nos encontremos. 
 
-Demos: https://youtu.be/js4I93n6rmY , https://youtu.be/DqerO4z5cqc , https://youtu.be/DzHvCFsFxXI , https://youtu.be/BAtsyjpJSyo
+Demo de uso: https://youtu.be/y7Vjqd2GCyY , 
+Como añadir el script a AutoCad: https://youtu.be/DqerO4z5cqc ,
+https://youtu.be/DzHvCFsFxXI , https://youtu.be/BAtsyjpJSyo
 
 Web : http://generador-gml.blogspot.com.es
 
