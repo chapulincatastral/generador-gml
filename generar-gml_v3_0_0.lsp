@@ -768,3 +768,13 @@
 ); defun vl-filename-directory
 ); progn
 ); if Funciones Acad14
+(princ
+    (strcat
+        "\n:: generar-gml.lsp | Version 3.0.1 | \\U+00A9 ChapulinCatastral "
+        (menucmd "m=$(edtime,0,yyyy)")
+        " https://github.com/chapulincatastral/ ::"
+        "\n:: Escriba \"gml30\" para generar GML de RGA en el huso 30 ::"
+        "\n:: Escriba \"gmle\"  para generar GML de Edificio ::"
+    )
+)
+(princ)
