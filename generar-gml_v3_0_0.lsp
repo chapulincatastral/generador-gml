@@ -1,16 +1,14 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;; Script LISP generar-gml v1.0
-;;;;;;;;;;; Autores: Castell Cebolla, Alvaro Alvarez, Pepe Alacreu
-;;;;;;;;;;; (c) 2016 http://generador-gml.blogspot.com.es/
+;;;;;;;;;;; Script LISP generar-gml 
 ;;;;;;;;;;;
-;;;;;;;;;;; LIMITACION DE RESPONSABILIDAD: No proporciona se soporte de este script. El script se proporciona tal cual es sin responsabilidad ni garanti'a de ningu'n tipo. Los autores se eximen de toda garantia impli'cita incluyendo, sin limitacio'n, cualquier garanti'a de comerciabilidad o de idoneidad para un propo'sito en particular. Usted asume todo el riesgo surgido por el uso o el funcionamiento del script y su documentacio'n. En ningu'n caso sera'n sus autores, o cualquier otra persona involucrada en la creacio'n, produccio'n o distribucio'n del script responsable por los dan~os y perjuicios (incluyendo, sin limitacio'n, dan~os por pe'rdida de beneficios empresariales, interrupcio'n de negocio, pe'rdida de informacio'n comercial u otra perdida pecuniaria) derivados del uso o la incapacidad de usar el script y su documentacio'n, incluso si no ha sido advertido de la posibilidad de tales dan~os.
+;;;;;;;;;;; LIMITACION DE RESPONSABILIDAD: No se proporciona soporte de este script. El script se proporciona tal cual es sin responsabilidad ni garantía de ningún tipo. Los autores se eximen de toda garantia implícita incluyendo, sin limitación, cualquier garantía de comerciabilidad o de idoneidad para un propósito en particular. Usted asume todo el riesgo surgido por el uso o el funcionamiento del script y su documentación. En ningún caso serán sus autores, o cualquier otra persona involucrada en la creación, producción o distribución del script responsable por los daños y perjuicios (incluyendo, sin limitación, daños por pérdida de beneficios empresariales, interrupción de negocio, pérdida de información comercial u otra perdida pecuniaria) derivados del uso o la incapacidad de usar el script y su documentación, incluso si no ha sido advertido de la posibilidad de tales daños.
 ;;;;;;;;;;;
-;;;;;;;;;;; LICENCIA PU'BLICA GENERAL (GNU GPL v3): Copyright (C) 2016 Catastro. Este programa es software libre. Puede redistribuirlo y/o modificarlo bajo los te'rminos de la Licencia Pu'blica General de GNU tal como esta' publicada por la Free Software Foundation, bien de la versio'n 3 de dicha Licencia o bien (segu'n su eleccio'n) de cualquier versio'n posterior. Este programa se distribuye con la esperanza de que sea u'til, pero SIN NINGUNA GARANTI'A, incluso sin la garanti'a MERCANTIL impli'cita o sin garantizar la CONVENIENCIA PARA UN PROPO'SITO PARTICULAR. Ve'ase la Licencia Pu'blica General de GNU para ma's detalles. Usted deberi'a haber recibido una copia de la Licencia Pu'blica General junto con este programa. Si no ha sido asi', consulte <http://www.gnu.org/licenses>.
-;
-;;;;;;;;;;; version: 1.0.0; fecha: 10.2016; Autor: Castell Cebolla, Alvaro Alvarez, Pepe Alacreu; Modificacion: Version inicial
+;;;;;;;;;;; LICENCIA PÚBLICA GENERAL (GNU GPL v3): Copyright (C) 2016 ChapulinCatastral https://github.com/chapulincatastral/ . Este programa es software libre. Puede redistribuirlo y/o modificarlo bajo los términos de la Licencia Pública General de GNU tal como está publicada por la Free Software Foundation, bien de la versión 3 de dicha Licencia o bien (según su elección) de cualquier versión posterior. Este programa se distribuye con la esperanza de que sea útil, pero SIN NINGUNA GARANTÍA, incluso sin la garantía MERCANTIL implícita o sin garantizar la CONVENIENCIA PARA UN PROPÓSITO PARTICULAR. Véase la Licencia Pública General de GNU para más detalles. Usted debería haber recibido una copia de la Licencia Pública General junto con este programa. Si no ha sido así, consulte <http://www.gnu.org/licenses>.
+;;;;;;;;;;;
+;;;;;;;;;;; version: 1.0.0; fecha: 10.2016; Autor: Castell Cebolla, Alvaro Alvarez, Pepe Alacreu; Modificacion: Versión inicial
 ;;;;;;;;;;; version: 2.0.0; fecha: 11.2016; Autor: Alvaro; Modificacion: soporte para; islas, identificador de parcela y tipo identificador de parcela
-;;;;;;;;;;; version: 3.0.0; fecha: 12.2016; Autor: Alvaro; Modificacion: se an~ade GMLe que genera GML de edificio.
-;
+;;;;;;;;;;; version: 3.0.0; fecha: 12.2016; Autor: Alvaro; Modificacion: se añade GMLe que genera GML de edificio.
+;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (progn ; Plantillas de fichero GML de Edificio
 (setq fichero_gml_1 "<?xml version=\"1.0\" encoding=\"ISO-8859-1\"?>
@@ -94,7 +92,7 @@
 <!-- Geometria en formato GML       -->
          <cp:geometry>
 <!-- srs Name codigo del sistema de referencia en el que se dan las coordenadas, que debe coincidir con el de la cartografia catastral -->
-<!-- el sistema de referencia de la cartografÃƒÂ­a catastral varÃƒÂ­a segÃƒÂºn provincia, siendo accesible desde la consulta de cartografÃƒÂ­a en Sede -->  
+<!-- el sistema de referencia de la cartografÃ­a catastral varÃ­a segÃºn provincia, siendo accesible desde la consulta de cartografÃ­a en Sede -->  
            <gml:MultiSurface gml:id=\"MultiSurface_ES.%TIPO_DE_PARCELA%.CP.%CODIGOPARCELA%\" srsName=\"urn:ogc:def:crs:EPSG::258%HUSOPARCELA%\"> 
              <gml:surfaceMember>
                <gml:Surface gml:id=\"Surface_ES.%TIPO_DE_PARCELA%.CP.%CODIGOPARCELA%\" srsName=\"urn:ogc:def:crs:EPSG::258%HUSOPARCELA%\">
@@ -388,43 +386,43 @@
 (defun msg_error ()
   (setq texto "")
   (if (and (= obra_txt "obra_acabada")  (not (es_fecha fecha_inicio_txt))) 
-    (setq texto (strcat texto "El formato de fecha inicio obras:\"" fecha_inicio_txt "\" no es correcto\n"))
+    (setq texto (strcat texto "\nERROR.\n El formato de fecha inicio obras:\"" fecha_inicio_txt "\" no es correcto\n"))
     )
   (if (and (= obra_txt "obra_acabada")  (not (es_fecha fecha_fin_txt))) 
-    (setq texto (strcat texto "El formato de fecha fin obras:\"" fecha_fin_txt "\" no es correcto\n"))
+    (setq texto (strcat texto "\nERROR.\n El formato de fecha fin obras:\"" fecha_fin_txt "\" no es correcto\n"))
     )
   (if (= referencia_catastral_txt "")
      (setq texto (strcat texto 
-                         "ERROR.\n El identificador de la parcela no puede estar en blanco\n")))
+                         "\nERROR.\n El identificador de la parcela no puede estar en blanco\n")))
   (if (=  precision_txt "")
-     (setq texto (strcat texto "ERROR.\n La precisiÃ³Â®Â Â¤e las coord. no puede dejarse en blanco\n"))
+     (setq texto (strcat texto "\nERROR.\n La precisión de las coord. no puede dejarse en blanco\n"))
      (if (not (es_real_positivo precision_txt))
-       (setq texto (strcat texto "ERROR.\n La precisiÃ³Â®Â Â¤e las coord.:\"" 
-                           precision_txt "\", no es un nÃ²Â­Â¥Â²o real positivo\n"))))
+       (setq texto (strcat texto "\nERROR.\n La precisión de las coord.:\"" 
+                           precision_txt "\", no es un número real positivo\n"))))
   (if (=  inmuebles_txt "")
-     (setq texto (strcat texto "ERROR.\n El nÃ²Â­Â¥Â²o de inmuebles no puede dejarse en blanco\n"))
+     (setq texto (strcat texto "\nERROR.\n El número de inmuebles no puede dejarse en blanco\n"))
      (if (not (es_entero_positivo inmuebles_txt))
-       (setq texto (strcat texto "ERROR.\n El nÃ²Â­Â¥Â²o de inmuebles:\"" 
-                           inmuebles_txt "\", no es un nÃ²Â­Â¥Â²o entero positivo\n"))))
+       (setq texto (strcat texto "\nERROR.\n El número de inmuebles:\"" 
+                           inmuebles_txt "\", no es un número entero positivo\n"))))
   (if (=  viviendas_txt "")
-     (setq texto (strcat texto "ERROR.\n El nÃ²Â­Â¥Â²o de viviendas no puede dejarse en blanco\n"))
+     (setq texto (strcat texto "\nERROR.\n El número de viviendas no puede dejarse en blanco\n"))
      (if (not (es_entero_positivo viviendas_txt))
-       (setq texto (strcat texto "ERROR.\n El nÃ²Â­Â¥Â²o de viviendas:\"" 
-                           viviendas_txt "\", no es un nÃ²Â­Â¥Â²o entero positivo\n"))))
+       (setq texto (strcat texto "\nERROR.\n El número de viviendas:\"" 
+                           viviendas_txt "\", no es un número entero positivo\n"))))
   (if (=  plantas_txt "")
-     (setq texto (strcat texto "ERROR.\n El nÃ²Â­Â¥Â²o de plantas no puede dejarse en blanco\n"))
+     (setq texto (strcat texto "\nERROR.\n El número de plantas no puede dejarse en blanco\n"))
      (if (not (es_entero_positivo plantas_txt))
-       (setq texto (strcat texto "ERROR.\n El nÃ²Â­Â¥Â²o de plantas:\"" 
-                           plantas_txt "\", no es un nÃ²Â­Â¥Â²o entero positivo\n"))))
+       (setq texto (strcat texto "\nERROR.\n El número de plantas:\"" 
+                           plantas_txt "\", no es un número entero positivo\n"))))
   (if (=  superficie_txt "")
-     (setq texto (strcat texto "ERROR.\n La superficie no puede dejarse en blanco\n"))
+     (setq texto (strcat texto "\nERROR.\n La superficie no puede dejarse en blanco\n"))
      (if (not (es_entero_positivo superficie_txt))
-       (setq texto (strcat texto "ERROR.\n El valor de la superficie:\"" 
-                           superficie_txt "\", no es un nÃ²Â­Â¥Â²o entero positivo\n"))))
+       (setq texto (strcat texto "\nERROR.\n El valor de la superficie:\"" 
+                           superficie_txt "\", no es un número entero positivo\n"))))
    (if (and (es_entero_positivo inmuebles_txt)
             (es_entero_positivo viviendas_txt)
             (> (atoi viviendas_txt) (atoi inmuebles_txt)))
-       (setq texto (strcat texto "ERROR.\n El nÃ²Â­Â¥Â²o de inmuebles no puede ser menor que el de viviendas\n")))   
+       (setq texto (strcat texto "\nERROR.\n El número de inmuebles no puede ser menor que el de viviendas\n")))   
   texto
 )
 (defun formulario_es_correcto ()
@@ -481,12 +479,12 @@
   (setq formulario_correcto nil)
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; Solicitamos seleccionar los recintos del edificio
-  (alert "Seleccione los perÃ­metros exteriores del edificio.\n NOTA: SÃ³lo se permite seleccionar polÃ­lineas previamente cerradas!!")
+  (alert "Seleccione los perímetros exteriores del edificio.\n\n NOTA: Sólo se permite seleccionar polílineas previamente cerradas!!")
   ;; Solo se permite seleccionar polilineas  previamente cerradas
   (setq recinto_parcela (ssget '((0 . "POLYLINE,LWPOLYLINE") (70 . 1))))
   ;; generacion de la lista chapulin a partir de los recintos seleccionados
   (setq  numero_entidades_recinto (sslength recinto_parcela))
-  (alert (strcat "NÃºmero de recintos seleccionados: " (itoa numero_entidades_recinto)))
+  (alert (strcat "Número de recintos seleccionados: " (itoa numero_entidades_recinto)))
   (setq  numero_entidad 0 )
   (repeat numero_entidades_recinto
     (setq lista_chapulin (cons (analiza_entidad_seleccionada (ssname recinto_parcela numero_entidad)) lista_chapulin)
@@ -513,17 +511,17 @@
   ;; Vamos con el formulario
   (if(not(setq dcl_id (load_dialog "GML_EDIFICIO.dcl")))
     (progn ; then => NO se ha encontrado el fichero .dcl con la definion del formulario
-    (alert "El fichero con la definiciÃ³n del formulario no se ha podido cargar,
-      aÃ±ada nombre del directorio donde se encuentra el fichero  GML_EDIFICIO.dcl
-      a la lista de directorios: \"Opciones de AutoCad\"->\"Ruta de bÃºsqueda de archivo de soporte\"")
+    (alert "El fichero con la definición del formulario no se ha podido cargar,
+      añada nombre del directorio donde se encuentra el fichero  GML_EDIFICIO.dcl
+      a la lista de directorios: \"Opciones de AutoCad\"->\"Ruta de búsqueda de archivo de soporte\"")
     (exit)
   ); 
     (progn ; else => SI se ha encontrado el fichero .dcl con la definion del formulario
     (while (and (not formulario_correcto) (not cancelado))
       (if (not (new_dialog "GML_EDIFICIO" dcl_id))
         (progn ; then => error en la definicion  del formulario
-          (alert "\n\n La definiciÃ³n del formulario \"GML_EDIFICIO \" 
-                  no se encuentra en el fichero de definiÃ³n \"GML_EDIFICIO.dcl\"")
+          (alert "\n\n La definición del formulario \"GML_EDIFICIO \" 
+                  no se encuentra en el fichero de definión \"GML_EDIFICIO.dcl\"")
           (exit)
         )
         (progn ; else => definicion del formulario correcta
@@ -564,28 +562,28 @@
           (if (= ddiag 3) ; Ha pulsado ayuda.
             (progn
             ;(princ "\n \n ...Ha pulsado ayuda. \n ")
-            (alert "- Se recomienda entrar en la Sede ElectrÃ³nica del Catastro para:
+            (alert "- Se recomienda entrar en la Sede Electrónica del Catastro para:
         . Averiguar el sistema de referencia y huso de las coordenadas  
         . Descargar las coordenadas georeferenciadas del solar donde
           se ubica el edificio. 
-        . Si el edificio estÃ¡ representado en Catastro, descargar el GML!!.
+        . Si el edificio está representado en Catastro, descargar el GML!!.
 
-- El perÃ­metro del edificio ha de corresponderse o estar dentro de la parcela catastral georreferenciada, que previamente ha sido descargada.
+- El perímetro del edificio ha de corresponderse o estar dentro de la parcela catastral georreferenciada, que previamente ha sido descargada.
 
-- A la CartogrfÃ­a Catastral se le supone una precisiÃ³n de 0,1 metros.
+- A la Cartogrfía Catastral se le supone una precisión de 0,1 metros.
 
-- El perÃ­metro del edificio se representa mediante una polilÃ­nea cerrada, compuesta por segmentos rectilÃ­neos. No se admiten curvas.
+- El perímetro del edificio se representa mediante una polilínea cerrada, compuesta por segmentos rectilíneos. No se admiten curvas.
 
-- Si el edificio estÃ¡ compuesto por varios bloques independientes, tendremos varios perÃ­metros.
+- Si el edificio está compuesto por varios bloques independientes, tendremos varios perímetros.
 
-- Si hay mas de un perÃ­metro, no puede haber contactos entre ellos, por pequeÃ±o que sea."))
+- Si hay mas de un perímetro, no puede haber contactos entre ellos, por pequeño que sea."))
           )
           (if (= ddiag 2) ; Ha pulsado aceptar
           (progn
             ;(princ "\n \n ...Ha Pulsado aceptar!")
             (if (not (setq formulario_correcto (formulario_es_correcto)))
               (progn
-                (alert "ATENCIÃ“N:\n\nSe han producido ERRORES\n\n al cumplimentar el formulario")
+                (alert "ATENCIÓN:\n\nSe han producido ERRORES\n\n al cumplimentar el formulario")
                 (alert (msg_error))))
            ))
         ); else => definicion del formulario correcta
@@ -594,7 +592,7 @@
   (unload_dialog dcl_id)
   (if (not cancelado)
     (genera_fichero_gml_edificio (proporcionar_fichero_escritura "gml") lista_chapulin)
-    (alert "GeneraciÃ³n de fichero GML de edificio cancelada"))    
+    (alert "Generación de fichero GML de edificio cancelada"))    
   ); progn else
   );if
   (princ)
@@ -604,15 +602,19 @@
 (progn ; Funciones para generar el GML de RGA
 (defun C:gml28()
 (gml 28)
+(princ)
 )
 (defun C:gml29()
 (gml 29)
+(princ)
 )
 (defun C:gml30()
 (gml 30)
+(princ)
 )
 (defun C:gml31()
 (gml 31)
+(princ)
 )
 (defun gml(parametro_huso)
   ;;(defun gml(parametro_huso / HUSO plantilla1 plantilla2 plantilla3 plantilla4 camino_fichero nombre_fichero_escritura recinto_parcela mensaje_final nombre_entidad lista_datos_entidad)
@@ -663,7 +665,7 @@
   ); if not huso valido
   (setq HUSO (itoa parametro_huso))
   ;; seleccionemos los recintos exteriores de las parcelas
-  (alert (strcat "Seleccione perÃ­metros exteriores de las parcelas.\n\n SÃ³lo se permite seleccionar polilÃ­neas previamente cerradas\n\n Huso de trabajo: "
+  (alert (strcat "Seleccione perímetros exteriores de las parcelas.\n\n NOTA: Sólo se permite seleccionar polilíneas previamente cerradas\n\n Huso de trabajo: "
                  HUSO))
   (setq recinto_parcela (ssget '((0 . "POLYLINE,LWPOLYLINE") (70 . 1))))
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -673,7 +675,7 @@
   (repeat numero_entidades_recinto
     (setq lista_chapulin (cons (analiza_entidad_seleccionada (ssname recinto_parcela numero_entidad)) lista_chapulin)
           numero_entidad (+ 1 numero_entidad)))
-  (alert (strcat "NÃºmero de entidades seleccionadas: " (itoa (vl-list-length lista_chapulin))))
+  (alert (strcat "Número de entidades seleccionadas: " (itoa (vl-list-length lista_chapulin))))
   (setq nombre_fichero_escritura (proporcionar_fichero_escritura "txt"))
   (setq nombre_directorio (vl-filename-directory nombre_fichero_escritura))
   (setq mensaje_final 
@@ -711,7 +713,6 @@
     (setq i (+ i 1))
     (setq lista_chapulin (cdr lista_chapulin))
 ); while
-
   (alert mensaje_final) ; mostramos datos resumen  
   (setq fichero_escritura (open nombre_fichero_escritura "w"))
   (princ mensaje_final fichero_escritura); graba en el fichero .txt los datos resumen
@@ -770,11 +771,14 @@
 ); if Funciones Acad14
 (princ
     (strcat
-        "\n:: generar-gml.lsp | Version 3.0.1 | \\U+00A9 ChapulinCatastral "
+        "\n:: generar-gml.lsp | Version 3.0.0 | \\U+00A9 "
         (menucmd "m=$(edtime,0,yyyy)")
-        " https://github.com/chapulincatastral/ ::"
+        " ChapulinCatastral https://github.com/chapulincatastral/ ::"
         "\n:: Escriba \"gml30\" para generar GML de RGA en el huso 30 ::"
         "\n:: Escriba \"gmle\"  para generar GML de Edificio ::"
     )
 )
 (princ)
+;;-----------------------------------------------------------------------------------;;
+;;                             End of File                                           ;;
+;;-----------------------------------------------------------------------------------;;
