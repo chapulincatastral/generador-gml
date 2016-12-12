@@ -1,7 +1,7 @@
 # generador-gml
 Script AutoLISP para la generación de ficheros GML INSPIRE de Parcela Catastral y GML de Edificio.
 
-Descripción: Este complemento permite la generación  desde AutoCAD ficheros en formato GML Inspire de parcela catastral u de edificio seleccionando los perímetros de la parcela o del edificio. AutoCAD puede tomar como información de partida la cartografía catastral obtenida desde la Sede Electrónica del Catastro (SEC), en formato DXF o DWG. Los ficheros GML INSPIRE de parcela catastral obtenidos podrá ser validados en la Sede Electrónica del Catastro (SEC) para obtener el Informe de Validación Gráfica exigido por notarios y registradores. El generador es gratuito y basado en software libre. 
+Descripción: Este complemento permite la generación  desde AutoCAD ficheros en formato GML Inspire de parcela catastral o de edificio seleccionando los perímetros de la parcela o del edificio. AutoCAD puede tomar como información de partida la cartografía catastral obtenida desde la Sede Electrónica del Catastro (SEC), en formato DXF o DWG. Los ficheros GML INSPIRE de parcela catastral obtenidos podrá ser validados en la Sede Electrónica del Catastro (SEC) para obtener el Informe de Validación Gráfica exigido por notarios y registradores. El generador es gratuito y basado en software libre. 
 
 Uso: Una vez descargado el fichero .zip hay que descomprimirlo e instalarlo siguiendo las intrucciones.
 Una vez cargado tenemos cuatro cinco nuevos: gmle, para la generaración de GML de Edificio y gml28, gml29, gml30, gml31. Para la generación de GML de Parcela dependiendo del huso en que nos encontremos. EL programa nos permite la realización de segregaciones, agrupaciones, reparcelaciones y altas de obra nueva.
