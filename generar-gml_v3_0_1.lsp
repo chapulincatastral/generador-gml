@@ -281,7 +281,7 @@
     (setq lista_datos_entidad (entget nombre_una_entidad))
     (if (tiene_arcos  lista_datos_entidad)
         (progn 
-            (alert (strcat "Un recinto:\"" "exterior" "\"contiene arcos; Por vaor conviertalo en sucesión de líneas rectas"))
+            (alert (strcat "ERROR\n      Un recinto:\"" "exterior" "\"contiene arcos; Por favor conviertalo en sucesión de líneas rectas"))
             (exit)))
     (setq perimetro_entidad (mapcar 'cdr (vl-remove-if-not '(lambda (x) (= 10 (car x))) lista_datos_entidad)))
     ;;(setq objetos (ssget "_WP" perimetro_entidad))
@@ -361,7 +361,7 @@
             (= (cdar (vl-remove-if-not '(lambda (x) (= 70 (car x)) ) lista_datos_entidad)) 1))
             (if (tiene_arcos  lista_datos_entidad)
             (progn ; then
-                (alert (strcat "Un recinto:\"" "interior" "\"contiene arcos; Por vaor conviertalo en sucesión de líneas rectas"))
+                (alert (strcat "ERROR\n      Un recinto:\"" "interior" "\"contiene arcos; Por favor conviertalo en sucesión de líneas rectas"))
                 (exit))
             (progn
 		        (command "_AREA" "_E" nombre_entidad)
