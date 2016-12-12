@@ -1,16 +1,19 @@
 # generador-gml
-Script AutoLISP para la generación de ficheros GML INSPIRE de parcela catastral.
+Script AutoLISP para la generación de ficheros GML INSPIRE de Parcela Catastral y GML de Edificio.
 
-Descripción: Este complemento permite exportar desde AutoCAD ficheros en formato GML Inspire de parcela catastral. AutoCAD puede tomar como información de partida la cartografía catastral obtenida desde la Sede Electrónica del Catastro (SEC), en formato DXF o DWG. Los ficheros GML INSPIRE de parcela catastral obtenidos podrá ser validados en la Sede Electrónica del Catastro (SEC) para obtener el Informe de Validación Gráfica exigido por notarios y registradores. El generador es gratuito y basado en software libre.
+Descripción: Este complemento permite la generación  desde AutoCAD ficheros en formato GML Inspire de parcela catastral u de edificio seleccionando los perímetros de la parcela o del edificio. AutoCAD puede tomar como información de partida la cartografía catastral obtenida desde la Sede Electrónica del Catastro (SEC), en formato DXF o DWG. Los ficheros GML INSPIRE de parcela catastral obtenidos podrá ser validados en la Sede Electrónica del Catastro (SEC) para obtener el Informe de Validación Gráfica exigido por notarios y registradores. El generador es gratuito y basado en software libre. 
 
-Uso: Es necesario cargar en AutoCAD el archivo .lsp previamente descargado. Lo podemos cargar mediante el comando appload o el menú Herramientas -> Cargar aplicación. 
-Una vez cargado tenemos cuatro comandos nuevos: gml28, gml29, gml30, gml31. Que invocaremos desde la línea de COMANDO dependiendo del huso en que nos encontremos. 
+Uso: Una vez descargado el fichero .zip hay que descomprimirlo e instalarlo siguiendo las intrucciones.
+Una vez cargado tenemos cuatro cinco nuevos: gmle, para la generaración de GML de Edificio y gml28, gml29, gml30, gml31. Para la generación de GML de Parcela dependiendo del huso en que nos encontremos. EL programa nos permite la realización de segregaciones, agrupaciones, reparcelaciones y altas de obra nueva.
 
 Videos: 
   . Agregacion-segregación: https://youtu.be/y7Vjqd2GCyY , 
   . Como añadir el script a AutoCad: https://youtu.be/DqerO4z5cqc , 
   . Como generar una polilinea cerrada con el comando "polcont" https://youtu.be/BAtsyjpJSyo
+  . Como generar un GML de Edificio (Por editar)
 
-Web : http://generador-gml.blogspot.com.es
+Web: http://generador-gml.blogspot.com.es Noticias y manuales sobre generador-gml
 
-Etiquetas: gml, parcela catastral, sec, inspire, autolisp, autocad, catastro, cadastre, notarías, notarios, registros, registradores, dxf, exportar, coordinación, cartografía.
+Contacto: generador.gml (Arroba) gmail .com
+
+Etiquetas: gml, parcela catastral, gml edificio, sec, inspire, autolisp, autocad, catastro, cadastre, notarías, notarios, registros, registradores, dxf, exportar, coordinación, cartografía.
