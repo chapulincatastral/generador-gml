@@ -8,7 +8,7 @@
 ;;;;;;;;;;; version: 1.0.0; fecha: 10.2016; Autor: Castell Cebolla, Alvaro Alvarez, Pepe Alacreu; Modificacion: Genera GML de Parcela Catastral
 ;;;;;;;;;;; version: 2.0.0; fecha: 11.2016; Autor: Alvaro; Modificacion: soporte para; islas, identificador de parcela y tipo identificador de parcela
 ;;;;;;;;;;; version: 3.0.0; fecha: 12.2016; Autor: Alvaro; Modificacion: se añade GMLe que genera GML de edificio.
-;;;;;;;;;;; version: 3.0.1; fecha: 12.2016; Autor: Alvaro, Castell ;  Se filtran las entidades arco en las polilíneas.
+;;;;;;;;;;; version: 3.0.1; fecha: 12.2016; Autor: Alvaro, Castell ;  Se filtran las "entidades arco" en las polilíneas cerradas.
 ;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (progn ; Plantillas de fichero GML de Edificio
@@ -544,7 +544,7 @@
           (progn ; Rellenamos los campos del formulario con los valores recuperados
                  ; si es la primera vez del while, los valores son "los valores por defecto"
           (action_tile "cancel" "(done_dialog 1)")
-          (action_tile "help" "(done_dialog 3)")
+          (action_tile "help" "(saveVars)(done_dialog 3)")
           (action_tile "accept" "(saveVars)(done_dialog 2)")
           ;; Valores por defecto del cuadro de dialogo
           (set_tile "obra" obra_txt)
@@ -581,8 +581,7 @@
             (alert "- Se recomienda entrar en la Sede Electrónica del Catastro para:
         . Averiguar el sistema de referencia y huso de las coordenadas  
         . Descargar las coordenadas georreferenciadas del solar donde
-          se ubica el edificio. 
-        . Si el edificio está representado en Catastro, descargar el GML!!.
+          se ubica el edificio.
 
 - El perímetro del edificio ha de corresponderse o estar dentro de la parcela catastral georreferenciada, que previamente ha sido descargada.
 
