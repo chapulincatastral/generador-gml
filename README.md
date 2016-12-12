@@ -5,7 +5,8 @@ Descripción: Este complemento permite la generación  desde AutoCAD ficheros en
 
 Uso: Una vez descargado el fichero .zip hay que descomprimirlo e instalarlo siguiendo las intrucciones.
 Una vez cargado tenemos  cinco comandos nuevos: gmle, para la generaración de GML de Edificio y gml28, gml29, gml30, gml31, para la generación de GML de Parcela dependiendo del huso en que nos encontremos. El programa nos permite la realización de segregaciones, agrupaciones, reparcelaciones y altas de obra nueva con AutoCad, sin intervención de programas externos.
-Videos: 
+
+Videos demostración: 
   . Agregacion-segregación: https://youtu.be/y7Vjqd2GCyY , 
   . Como añadir el script a AutoCad: https://youtu.be/DqerO4z5cqc , 
   . Como generar una polilinea cerrada con el comando "polcont" https://youtu.be/BAtsyjpJSyo
