@@ -4,7 +4,7 @@ label = "Parámetros de GML de Edificio";
 : column {
 ///////////////////////////////////////
 :boxed_row {
-label = "Certificación de fin de obras";
+label = "Certificación de final de obra";
     : column {
     : radio_column {
       label = "Estado de las de obras";
@@ -21,7 +21,7 @@ label = "Certificación de fin de obras";
     }
     }
     : boxed_column {
-    label = "Cumplimentar las fechas sólo si se tiene el certificado de fin de obras";
+    label = "Cumplimentar sólo si se tiene el certif. de final de obra";
     :row {
     : edit_box {
       key = "fecha_inicio";
@@ -31,7 +31,7 @@ label = "Certificación de fin de obras";
     :row {
     : edit_box {
       key = "fecha_fin";
-      label = "la fecha de fin de obras del certificado";
+      label = "la fecha de final de obra del certificado";
       edit_width = 10;
       //value = "DD-MM-AAAA";
     }}
@@ -56,7 +56,7 @@ label = "Certificación de fin de obras";
         label = "Sist. ref. y huso";
         //value = 2;
         fixed_width_font = false;
-        width = 16;
+        width = 10;
       }
     }
     : row {
@@ -104,7 +104,7 @@ label = "Si lo conoce, indique el uso principal al que se destina el edificio (V
     }}
     }	
     : boxed_column {
-    label = "Número de alturas y superfice cubierta construida";
+    label = "Alturas y superfice computable según normativa";
     : row {
     : edit_box {
       key = "plantas";
@@ -115,7 +115,7 @@ label = "Si lo conoce, indique el uso principal al que se destina el edificio (V
     : row {
     : edit_box {
       key = "superficie";
-      label = "Superficie total cubierta (m² )";
+      label = "Superficie construida computable (m² )";
       edit_width = 5;
       //value = "";
     }}
@@ -137,7 +137,6 @@ label = "Si lo conoce, indique el uso principal al que se destina el edificio (V
       key = "help";
       label = " Ayuda ";
       is_default = false;
-      is_cancel = true;
     }
 }
 }

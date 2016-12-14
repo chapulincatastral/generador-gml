@@ -574,11 +574,11 @@
             (progn 
             ;(princ "\n \n ...Ha pulsado cancelar. \n ")
             (setq cancelado 'T))
-          )
-          (if (= ddiag 3) ; Ha pulsado ayuda.
-            (progn
-            ;(princ "\n \n ...Ha pulsado ayuda. \n ")
-            (alert "- Se recomienda entrar en la Sede Electrónica del Catastro para:
+          
+            (if (= ddiag 3) ; Ha pulsado ayuda.
+              (progn ; then
+              ;(princ "\n \n ...Ha pulsado ayuda. \n ")
+              (alert "- Se recomienda entrar en la Sede Electrónica del Catastro para:
         . Averiguar el sistema de referencia y huso de las coordenadas  
         . Descargar las coordenadas georreferenciadas del solar donde
           se ubica el edificio.
@@ -592,15 +592,21 @@
 - Si el edificio está compuesto por varios bloques independientes, tendremos varios perímetros.
 
 - Si hay mas de un perímetro, no puede haber contactos entre ellos, por pequeño que sea."))
-          )
-          (if (= ddiag 2) ; Ha pulsado aceptar
-          (progn
-            ;(princ "\n \n ...Ha Pulsado aceptar!")
-            (if (not (setq formulario_correcto (formulario_es_correcto)))
-              (progn
-                (alert "ATENCIÓN:\n\nSe han producido ERRORES\n\n al cumplimentar el formulario")
-                (alert (msg_error))))
-           ))
+
+            
+              (if (= ddiag 2) ; Ha pulsado aceptar
+                (progn
+                ;(princ "\n \n ...Ha Pulsado aceptar!")
+                (if (not (setq formulario_correcto (formulario_es_correcto)))
+                  (progn
+                    (alert "ATENCIÓN:\n\nSe han producido ERRORES\n\n al cumplimentar el formulario")
+                    (alert (msg_error))))
+               )
+                ;...no es ni uno ni dos ni tres => Ha pulsado aspa -> cerrar ventana. \n ")
+                (setq cancelado 'T)
+              ) ; else if
+            ) ; else if 
+          ) ; if  Ha pulsado cancelar.
         ); else => definicion del formulario correcta
       ) ; if not (new_dialog)
     ); while (not formulario_correcto) Y (not cancelado)
