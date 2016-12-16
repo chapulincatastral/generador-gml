@@ -451,7 +451,7 @@
     (/= referencia_catastral_txt "")
     (es_real_positivo precision_txt)
     (es_entero_positivo inmuebles_txt)
-    (or (es_entero_positivo viviendas_txt) (= "0" (es_entero_positivo viviendas_txt)))
+    (or (es_entero_positivo viviendas_txt) (= "0" viviendas_txt))
     (es_entero_positivo plantas_txt)
     (es_entero_positivo superficie_txt)
     (<= (atoi viviendas_txt) (atoi inmuebles_txt))
