@@ -423,7 +423,7 @@
                            inmuebles_txt "\", no es un número entero positivo\n"))))
   (if (=  viviendas_txt "")
      (setq texto (strcat texto "\nERROR.\n El número de viviendas no puede dejarse en blanco\n"))
-     (if (not (es_entero_positivo viviendas_txt))
+     (if (not (or (es_entero_positivo viviendas_txt) (= "0" viviendas_txt)))
        (setq texto (strcat texto "\nERROR.\n El número de viviendas:\"" 
                            viviendas_txt "\", no es un número entero positivo\n"))))
   (if (=  plantas_txt "")
