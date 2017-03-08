@@ -10,7 +10,7 @@ Videos demostración:
   . Agregacion-segregación:  https://youtu.be/h65Tq7GnSjU , 
   . Como añadir el script a AutoCad: https://youtu.be/DqerO4z5cqc , 
   . Como generar una polilinea cerrada con el comando "polcont" https://youtu.be/BAtsyjpJSyo
-  . Como generar un GML de Edificio (Por editar)
+  . Como generar un GML de Edificio https://www.youtube.com/watch?v=jLX3Y4iz_8c
 
 Web: http://generador-gml.blogspot.com.es Noticias y manuales sobre generador-gml
 
