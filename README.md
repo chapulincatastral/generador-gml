@@ -11,8 +11,9 @@ Videos demostración:
   . Como añadir el script a AutoCad: https://youtu.be/DqerO4z5cqc , 
   . Como generar una polilinea cerrada con el comando "polcont" https://youtu.be/BAtsyjpJSyo
   . Como generar un GML de Edificio https://www.youtube.com/watch?v=jLX3Y4iz_8c
-
-Web: http://generador-gml.blogspot.com.es Noticias y manuales sobre generador-gml
+  . Reparcelación y generación de RGA https://www.youtube.com/watch?v=nm1LuBFpVnM
+  
+Blog: http://generador-gml.blogspot.com.es Noticias y manuales sobre generador-gml
 
 Contacto: generador.gml (Arroba) gmail .com
 
