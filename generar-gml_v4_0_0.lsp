@@ -12,6 +12,7 @@
 ;;;;;;;;;;; version: 3.0.2; fecha: 16.12.2016; Autor: Alvaro; Modificación: Se permiten número de viviendas 0 y se modifican textos y descripción del formulario.
 ;;;;;;;;;;; version: 3.0.3; fecha: 17.12.2016; Autor: Alvaro; Modificación: Cambiamos el gmle para generar una coord. por línea y facilitar el "copy paste" de coord. 8-)
 ;;;;;;;;;;; version: 3.0.4; fecha: 21.12.2016; Autor: Alvaro; Modificación: Comprobar que los identificadores de parcela de GML de Parcela no contienen espacios en blanco
+;;;;;;;;;;; version: 4.0.0; fecha: 22.11.2017; Autor: Jose Antonio Garcia <jagarciavi@jagarciavi.es>; Modificación: Actualización de la plantilla de GML de parcela a la version 4 de INSPIRE (https://gyazo.com/b4ef35b1222b266f309a25879b7fd0f6).
 ;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (progn ; Plantillas de fichero GML de Edificio
@@ -87,7 +88,7 @@
 (setq plantilla1 "<?xml version=\"1.0\" encoding=\"utf-8\"?>
 <!--Parcela Catastral para entregar a la D.G. del Catastro.-->
 <!--Generado por chapulincatastral https://github.com/chapulincatastral/generador-gml/ -->
-<gml:FeatureCollection xmlns:gml=\"http://www.opengis.net/gml/3.2\" xmlns:gmd=\"http://www.isotc211.org/2005/gmd\" xmlns:ogc=\"http://www.opengis.net/ogc\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:cp=\"urn:x-inspire:specification:gmlas:CadastralParcels:3.0\" xmlns:base=\"urn:x-inspire:specification:gmlas:BaseTypes:3.2\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"urn:x-inspire:specification:gmlas:CadastralParcels:3.0 http://inspire.ec.europa.eu/schemas/cp/3.0/CadastralParcels.xsd\" gml:id=\"ES.LOCAL.CP.%CODIGOPARCELA%\">
+<gml:FeatureCollection gml:id=\"ES.SDGC.CP\" xmlns:gml=\"http://www.opengis.net/gml/3.2\" xmlns:gmd=\"http://www.isotc211.org/2005/gmd\" xmlns:ogc=\"http://www.opengis.net/ogc\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:cp=\"http://inspire.ec.europa.eu/schemas/cp/4.0\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://inspire.ec.europa.eu/schemas/cp/4.0 http://inspire.ec.europa.eu/schemas/cp/4.0/CadastralParcels.xsd\">
    <gml:featureMember>
       <cp:CadastralParcel gml:id=\"ES.%TIPO_DE_PARCELA%.CP.%CODIGOPARCELA%\">
 <!-- Superficie de la parcela en metros cuadrados. Tiene que coincidir con la calculada con las coordenadas.-->
@@ -123,7 +124,7 @@
               </gml:surfaceMember>
             </gml:MultiSurface>
          </cp:geometry>
-         <cp:inspireId>
+         <cp:inspireId xmlns:base=\"http://inspire.ec.europa.eu/schemas/base/3.3\">
            <base:Identifier>
 <!-- Identificativo local de la parcela. Solo puede tener letras y numeros. Se recomienda (pero no es necesario) poner siempre un digito de control, por ejemplo utilizando el algoritmo del NIF.-->
              <base:localId>%CODIGOPARCELA%</base:localId>
